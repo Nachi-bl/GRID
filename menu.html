@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fire Slice Pizza - Menu</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="img/back-customers.jpg" alt="Fire Slice Logo" />
+        <h1>Fire Slice Pizza</h1>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html" class="active">Menu</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="index.html#order-form">Order</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Pizza Menu Section -->
+  <main class="menu-page">
+    <h2>Our Delicious Pizza Menu</h2>
+    <div class="pizza-menu-grid">
+
+      <!-- Pizza Items -->
+      <div class="pizza-item" data-pizza="Margherita" onclick="selectPizza(this)">
+        <img src="img/2.jpg" alt="Margherita Pizza">
+        <h3>Margherita</h3>
+        <ul>
+          <li>Small - ₦2000</li>
+          <li>Medium - ₦3000</li>
+          <li>Large - ₦4500</li>
+        </ul>
+      </div>
+
+      <div class="pizza-item" data-pizza="Pepperoni" onclick="selectPizza(this)">
+        <img src="img/IMG-20251010-WA0001.jpg" alt="Pepperoni Pizza">
+        <h3>Pepperoni</h3>
+        <ul>
+          <li>Small - ₦2500</li>
+          <li>Medium - ₦4000</li>
+          <li>Large - ₦5500</li>
+        </ul>
+      </div>
+
+      <div class="pizza-item" data-pizza="BBQ Chicken" onclick="selectPizza(this)">
+        <img src="img/IMG-20251010-WA0002.jpg" alt="BBQ Chicken Pizza">
+        <h3>BBQ Chicken</h3>
+        <ul>
+          <li>Small - ₦3000</li>
+          <li>Medium - ₦4500</li>
+          <li>Large - ₦6000</li>
+        </ul>
+      </div>
+
+      <div class="pizza-item" data-pizza="Veggie Delight" onclick="selectPizza(this)">
+        <img src="img/IMG-20251010-WA0003.jpg" alt="Veggie Delight Pizza">
+        <h3>Veggie Delight</h3>
+        <ul>
+          <li>Small - ₦2200</li>
+          <li>Medium - ₦3500</li>
+          <li>Large - ₦5000</li>
+        </ul>
+      </div>
+
+      <!-- Add more pizza items here as needed -->
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-links">
+      <a href="https://facebook.com/yourusername" target="_blank" rel="noopener noreferrer"><i data-lucide="facebook"></i></a>
+      <a href="https://instagram.com/yourusername" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i></a>
+      <a href="https://twitter.com/yourusername" target="_blank" rel="noopener noreferrer"><i data-lucide="twitter"></i></a>
+      <a href="https://tiktok.com/@yourusername" target="_blank" rel="noopener noreferrer"><i data-lucide="music-2"></i></a>
+    </div>
+    <span>&copy; 2025 Fire Slice Pizza. All Rights Reserved.</span>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+
+    // Function to store selected pizza and redirect to Order Form
+    function selectPizza(element) {
+      const pizza = element.getAttribute('data-pizza');
+      localStorage.setItem('selectedPizza', pizza);
+      window.location.href = 'index.html#order-form';
+    }
+  </script>
+</body>
+</html>
